@@ -20,3 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dealers', 'DealerController@index')->name('dealers.index');
+Route::get('/dealers/create', 'DealerController@create')->name('dealers.create');
+Route::get('/dealers/{id}/view', 'DealerController@view')->name('dealers.view');
+Route::get('/dealers/{id}/edit', 'DealerController@edit')->name('dealers.edit');
+Route::post('/dealers/{id}/update', 'DealerController@update')->name('dealers.update');
+
+Route::post('/dealers/store', 'DealerController@store')->name('dealers.store');
+
+// Route::get('/dealers/create', 'DealerController@create')->name('dealers.create');
+

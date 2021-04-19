@@ -15,6 +15,11 @@ class CreateDealersTable extends Migration
     {
         Schema::create('dealers', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100)->nullable();
+            $table->string('email', 100)->nullable();
+            $table->string('tel', 100)->nullable();
+            $table->text('address');
+            $table->text('comment');
             $table->timestamps();
         });
     }
