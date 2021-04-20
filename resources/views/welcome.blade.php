@@ -81,18 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Traffic Log Pro
                 </div>
+                <p>Web development demo by Sutjapong</p>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a target="_blank" href="https://github.com/kengketa/mycv/blob/master/CV.pdf">Resume</a>
+                    <a target="_blank" href="https://github.com/kengketa/tlp-Laravel7-CRM-with-mail">Github</a>
+                    <a target="_blank" href="https://www.facebook.com/kengketa">Facebook</a>
+                    <a href="mailto:sutjapong.p@gmail.com">Email</a>
+
+
                 </div>
             </div>
         </div>
