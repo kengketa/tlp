@@ -4,6 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @elseif (Session::has('error'))
+                <div class="alert alert-danger">
+                    {{ Session::get('error') }}
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header">Dealer list</div>
                 <div class="card-body">
@@ -20,6 +29,7 @@
                         </div>
                     </div>
                     <div class="row mt-2">
+
                         <div class="col-12">
                             <table class="table">
                                 <thead class="table-primary">

@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="comment">
                                     <label for="comment">Comment</label>
-                                <textarea name="comment" id="" cols="30" rows="5" class="form-control">{{$dealer->name }}</textarea>
+                                <textarea name="comment" id="" cols="30" rows="5" class="form-control">{{$dealer->comment }}</textarea>
                                 </div>
                             </div>
                         </div>

@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Dealer;
+use Session;
 
 class DealerController extends Controller
 {
     public function index(Request $request){
 
-        //dd($request->all());
         $search = $request['search'];
         // dd($search);
         if ($search == null) {
@@ -71,7 +71,8 @@ class DealerController extends Controller
         $dealer->address = $request['address'];
         $dealer->comment = $request['comment'];
         $dealer->save();
-        return redirect(route('dealers.index'));
+
+        return redirect(route('dealers.index'))->with('success','dealer updated completed');
     } catch (\Throwable $th) {
         return redirect()->back()->with('error','Somthing went wrong!');
     }
