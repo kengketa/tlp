@@ -8,15 +8,13 @@
 </p>
 
 ## Install
-git clone this repo
-composer install
-cp .env_example .env
-php artisan key:generate
-set up your .env file
-php artisan migrate
-
-Register as an admin then login
-
+- git clone this repo
+- composer install
+- cp .env_example .env
+- php artisan key:generate
+- set up your .env file
+- php artisan migrate
+- Register as an admin then login
 
 ## About Laravel
 
