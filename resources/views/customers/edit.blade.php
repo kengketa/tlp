@@ -3,7 +3,7 @@
 @section('title', 'TLP')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Edit Dealer</h1>
+    <h1 class="m-0 text-dark">Edit Customer</h1>
 @stop
 
 
@@ -12,37 +12,37 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Edit Dealer</div>
+                <div class="card-header">Edit Customer</div>
                 <div class="card-body">
-                    <form action="{{ route('dealers.update',$dealer->id) }}" method="POST">
+                    <form action="{{ route('customers.update',$customer->id) }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="name">Dealer Name*</label>
-                                    <input type="text" name="name" class="form-control" required placeholder="eg. John Doe" value="{{ $dealer->name }}">
+                                    <label for="name">customer Name*</label>
+                                    <input type="text" name="name" class="form-control" required placeholder="eg. John Doe" value="{{ $customer->name }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email*</label>
-                                    <input type="email" name="email" class="form-control" required placeholder="eg. John@doe.com" value="{{ $dealer->email }}">
+                                    <input type="email" name="email" class="form-control" required placeholder="eg. John@doe.com" value="{{ $customer->email }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="tel">Tel.*</label>
-                                    <input type="text" name="tel" class="form-control" required pattern="[0][0-9]{9}" placeholder="eg. 0948972xxx" value="{{ $dealer->tel }}">
+                                    <input type="text" name="tel" class="form-control" required pattern="[0][0-9]{9}" placeholder="eg. 0948972xxx" value="{{ $customer->tel }}">
                                 </div>
                                 <div class="address">
                                     <label for="address">Address</label>
-                                    <input type="text" name="address" class="form-control" value="{{ $dealer->address }}">
+                                    <input type="text" name="address" class="form-control" value="{{ $customer->address }}">
                                 </div>
                                 <div class="comment">
                                     <label for="comment">Comment</label>
-                                <textarea name="comment" id="" cols="30" rows="5" class="form-control">{{$dealer->comment }}</textarea>
+                                <textarea name="comment" id="" cols="30" rows="5" class="form-control">{{$customer->comment }}</textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-2 text-right">
                             <div class="col-12">
-                                <a class="btn btn-primary" href="{{ route('dealers.index') }}">Back</a>
+                                <a class="btn btn-primary" href="{{ route('customers.index') }}">Back</a>
                                 <button type="submit" class="btn btn-primary">Update</button>
                             </div>
                         </div>

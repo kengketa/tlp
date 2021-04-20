@@ -3,7 +3,7 @@
 @section('title', 'TLP')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Dealers</h1>
+    <h1 class="m-0 text-dark">Customers</h1>
 @stop
 
 @section('content')
@@ -22,20 +22,24 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex">
-                        <div class="mr-auto p-2"><h4>Dealer List</h4></div>
+                        <div class="mr-auto p-2"><h4>Customer List</h4></div>
                         <div class="p-2">
-                            <form action="{{ route('dealers.index') }}">
+                            <form action="{{ route('customers.index') }}">
                                 <div class="form-inline">
                                     <input type="text" name="search" class="form-control">
                                     <button class="btn btn-primary mx-2" type="submit">Search</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="p-2"><a class="btn btn-primary" href="{{ route('dealers.create') }}">+</a></div>
+                        <div class="p-2"><a class="btn btn-primary" href="{{ route('customers.create') }}">+</a></div>
                       </div>
                 </div>
-
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 d-flex flex-row-reverse">
+
+                        </div>
+                    </div>
                     <div class="row mt-2">
 
                         <div class="col-12">
@@ -49,17 +53,17 @@
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($dealers as $dealer)
+                                    @foreach ($customers as $customer)
                                         <tr>
-                                            <td>{{ $dealer->id }}</td>
-                                            <td>{{ $dealer->name }}</td>
-                                            <td>{{ $dealer->email }}</td>
-                                            <td>{{ $dealer->tel }}</td>
-                                            <td>{{ $dealer->comment }}</td>
+                                            <td>{{ $customer->id }}</td>
+                                            <td>{{ $customer->name }}</td>
+                                            <td>{{ $customer->email }}</td>
+                                            <td>{{ $customer->tel }}</td>
+                                            <td>{{ $customer->comment }}</td>
                                             <td>
                                                 {{-- <a href="" class="btn btn-sm btn-danger">Delete</a> --}}
-                                                <a href="{{ route('dealers.edit',$dealer->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                                <a href="{{ route('dealers.view',$dealer->id) }}" class="btn btn-sm btn-info">View</a>
+                                                <a href="{{ route('customers.edit',$customer->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                                <a href="{{ route('customers.view',$customer->id) }}" class="btn btn-sm btn-info">View</a>
                                             </td>
                                         </tr>
                                     @endforeach
