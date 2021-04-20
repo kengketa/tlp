@@ -40,6 +40,11 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/{id}/update', 'CustomerController@update')->name('customers.update');
         Route::post('/store', 'CustomerController@store')->name('customers.store');
     });
+    Route::prefix('emails')->group(function () {
+        Route::get('/', 'EmailController@index')->name('emails.index');
+        Route::POST('/send', 'EmailController@send')->name('emails.send');
+    });
+
 });
 
 
