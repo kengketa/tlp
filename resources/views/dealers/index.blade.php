@@ -46,7 +46,7 @@
                                     <th>Email</th>
                                     <th>Tel</th>
                                     <th>Comment</th>
-                                    <th>Action</th>
+                                    <th style="width:150px">Action</th>
                                 </thead>
                                 <tbody>
                                     @foreach ($dealers as $dealer)
