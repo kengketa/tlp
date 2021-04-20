@@ -21,6 +21,15 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
+                            @if(Session::has('success'))
+                                <div class="alert alert-success">
+                                    {{ Session::get('success') }}
+                                </div>
+                            @elseif (Session::has('error'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('error') }}
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <form action="{{ route('emails.send') }}" method="POST">
                                     @csrf

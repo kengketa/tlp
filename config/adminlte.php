@@ -229,14 +229,21 @@ return [
         [
             'text'        => 'Dealer',
             'url'         => '/dealers',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-building',
             // 'label'       => 4,
             'label_color' => 'success',
         ],
         [
             'text'        => 'Customer',
             'url'         => '/customers',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-users',
+            // 'label'       => 4,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Send Email',
+            'url'         => '/emails',
+            'icon'        => 'far fa-envelope',
             // 'label'       => 4,
             'label_color' => 'success',
         ],
