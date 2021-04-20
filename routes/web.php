@@ -30,3 +30,9 @@ Route::post('/dealers/store', 'DealerController@store')->name('dealers.store');
 
 // Route::get('/dealers/create', 'DealerController@create')->name('dealers.create');
 
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');

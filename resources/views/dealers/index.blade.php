@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
+
+@section('content_header')
+    <h1 class="m-0 text-dark">Dealers</h1>
+@stop
 
 @section('content')
 <div class="container">
@@ -17,11 +23,9 @@
                 <div class="card-header">Dealer list</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-8">
-                        </div>
-                        <div class="col-4">
+                        <div class="col-12 d-flex flex-row-reverse">
                             <form action="{{ route('dealers.index') }}">
-                                <div class="form-inline">
+                                <div class="form-inline text-right">
                                     <input type="text" name="search" class="form-control">
                                     <button class="btn btn-primary mx-2" type="submit">Search</button>
                                 </div>
